@@ -16,6 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDataba
 builder.Services.AddGrpcReflection();
 var app = builder.Build();
 
+// You can use postman for calling gRPC here!
+// grpc://localhost:5231
 // Configure the HTTP request pipeline.
 app.MapGrpcService<GrpcProductsService>();
 app.MapGrpcReflectionService();
