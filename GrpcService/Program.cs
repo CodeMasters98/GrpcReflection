@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("codecell"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("gRPCParham"));
 builder.Services.AddGrpcReflection();
 var app = builder.Build();
 
